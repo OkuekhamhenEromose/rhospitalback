@@ -182,10 +182,7 @@ class BlogPostListSerializer(serializers.ModelSerializer):
     class Meta:
         model = BlogPost
         fields = [
-            "id", "title", "slug", "description", 
-            # ✅ ADD THESE RAW IMAGE FIELDS
-            "featured_image", "image_1", "image_2",
-            # ✅ KEEP THE URL FIELDS
+            "id", "title", "slug", "description",
             "featured_image_url", "image_1_url", "image_2_url",
             "published", "created_at", "table_of_contents", 
             "subheadings", "author_name", "author_role"
@@ -242,7 +239,6 @@ class BlogPostSerializer(serializers.ModelSerializer):
         fields = [
             "id", "title", "description", "content", 
             "author", "author_name", "author_role",
-            "featured_image", "image_1", "image_2",
             "featured_image_url", "image_1_url", "image_2_url",
             "published", "published_date", "created_at", "updated_at", 
             "slug", "table_of_contents", "enable_toc", "subheadings"
